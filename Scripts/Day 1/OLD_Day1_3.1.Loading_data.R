@@ -1,7 +1,7 @@
 
-##title: 1.1.Reading and Exploring data
+##title: 2.4.Reading and writing CSV files
 #author: Modified by Maina, Stephanie
-#date: "27 October 2017"
+#date: "13th May 2018"
 
 # 1. Reading in data
 #As empirical biologists, you'll generally have data to read in. 

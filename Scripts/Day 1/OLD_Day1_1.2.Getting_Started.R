@@ -116,7 +116,7 @@ x
 #(note that it does not contain the fraction 1/40, it contains a decimal approximation of this fraction. This appears exact in this case, but it is not. These decimal approximations are called "floating point numbers" and at some point you will probably end up having to learn more about them than you'd like).
 #Look up at the top right pane of RStudio, and you'll see that this has appeared in the "Workspace" pane.
 
-Our variable `x` can be used in place of a number in any calculation that expects a number.
+#Our variable `x` can be used in place of a number in any calculation that expects a number.
 
 log(x)
 
@@ -135,7 +135,7 @@ x=1/40
 x<-100
 
 #Notice also that variables can be reassigned.
-#`x`used to contain the value 0.025 and and now it has the value 100).
+##`x`used to contain the value 0.025 and and now it has the value 100).
 
 x
 
@@ -310,11 +310,11 @@ dim(y)
 
 y[1,2] # The element at the crossroad between the line 1 and column 2
 
-Extract a line from y with []
+#Extract a line from y with []
 
 y[1,] # line 1
 
-Extract a column from y with `[]`
+#Extract a column from y with `[]`
 
 y[,1] # column 1
 

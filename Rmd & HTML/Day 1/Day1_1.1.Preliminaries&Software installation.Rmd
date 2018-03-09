@@ -1,12 +1,19 @@
 ---
 title: "1.1 Preliminaries and Software installation"
 author: Adapted from Software Carpentry; modified by Maina,Stephanie
-date: "27 October 2017"
+date: "13th of  March 2018"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r echo=FALSE}
+library(knitr)
+library(rmarkdown)
+```
+
+
+```{r setup, echo=FALSE}
+opts_chunk$set(echo = FALSE, cache=FALSE)
+read_chunk('/Users/stephdagata/Documents/GitHub/MQ-R-WORKSHOP-2018/Scripts/Day 1/Day1_1.1.Preliminaries&Software installation.R')
 ```
 
 **How this is going to go down**
@@ -120,113 +127,17 @@ We're going to spend a bit of time using a data set. You can download this from 
 
 To make sure everything is working properly, in the console window type.
 
-```{r results='hide'}
+```{r results='hide',echo=TRUE}
 file.exists("data/seed_root_herbivores.csv")
 ```
 
 which should print
 
-```{r echo=F}
-file.exists("data/seed_root_herbivores.csv")
+```{r Part1, echo=F}
 ```
 
+# 3. EXITING R AND R STUDIO
+You can exit R and R Studio by typping q() at the command prompt. Note that this is the letter q followed by open and closed parentheses. 
 
-
-#### 3. Installing and managing packages
-
-***Ex01_0***
-
-  + **LISTS OF PACKAGES**
-  
-```{r eval=FALSE}
-browseURL("http://cran.r-project.org/web/views/")  # Opens CRAN Task Views in browser
-# Opens "Available CRAN Packages By Name" (from UCLA mirror) in browser
-browseURL("http://cran.stat.ucla.edu/web/packages/available_packages_by_name.html")
-# See also CRANtastic
-browseURL("http://crantastic.org/")
+```{r Part2, eval=FALSE,echo=TRUE}
 ```
-
-  + **See current packages**
-```{r eval=FALSE}
-library()  # Brings up editor list of installed packages
-search()   # Shows packages that are currently loaded
-```
-
-
-  + **TO INSTALL AND USE PACKAGES**
-  
-```{r eval=FALSE}
-# Can use menus: Tools > Install Packages... (or use Package window)
-# Or can use scripts, which can be saved in incorporated in source
-install.packages("ggplot2")  # Downloads package from CRAN and installs in R
-?install.packages
-library("ggplot2")  # Make package available; often used for loading in scripts
-require("ggplot2")  # Preferred for loading in functions; maybe better?
-library(help = "ggplot2")  # Brings up documentation in editor window
-```
-
-  + **UPDATE PACKAGES**
-  
-```{r eval=FALSE}
-# In RStudio, Tools > Check for Package Updates
-update.packages()  # Checks for updates; do periodically
-?update.packages
-```
-
-  + **UNLOAD/REMOVE PACKAGES**
-  
-```{r eval=FALSE}
-# By default, all loaded packages are unloaded when R quits
-# Can also open Packages window and manually uncheck
-# Or can use this code
-# To unload packages
-detach("package:ggplot2", unload = TRUE)
-?detach
-```
-
-  + **To permanently remove (delete) package**
-  
-```{r eval=FALSE}
-install.packages("psytabs")  # Adds psytabs
-remove.packages("psytabs")   # Deletes it
-?remove.packages
-```
-
-# 4. Getting help with R
-This is a summary of the information you can find here https://www.r-project.org/help.html
-
-#### R Help: `help()` and `?`
-The `help()` function and `?` help operator in R provide access to the documentation pages for **R functions, data sets, and other objects**, both for packages in the standard R distribution and for contributed packages. 
-For example, to access documentation for the standard mean function, for example, enter the command:`help(mean)` or `help("mean")`, or `?mean` or `?"mean"` (the quotes are optional).
-
-You may also use the `help()` function to access information about a **package** in your library - for example, `help(package="MASS")` - which displays an index of available help pages for the package along with some other information.
-
-Help pages for functions usually include a section with executable examples illustrating how the functions work. You can execute these examples in the current R session via the `example()` 
-```{r}
-example(mean)
-```
-
-#### Searching for Help Within R
-
-The `help()`  function and `?` operator are useful only if you already know the name of the function that you wish to use. There are also facilities in the standard R distribution for discovering functions and other objects. The following functions cast a progressively wider net. Use the help system to obtain complete documentation for these functions: for example, `apropos()`or `?apropos`.
-
-The `apropos()` function searches for objects, including functions, directly accessible in the current R session that have names that include a specified character string. This may be a literal string or a regular expression to be used for pattern-matching. By default, string matching by `apropos()` is case-insensitive. For example, 
-
-```{r}
-apropos("^glm") 
-```
-returns the names of all accessible objects that start with the (case-insensitive) characters "glm"
-
-#### R Help on the internet
-
-There are internet search sites that are specialized for R searches, including `search.r-project.org` (which is the site used by RSiteSearch) and `Rseek.org`.
-
-It is also possible to use a general search site like **Google**, by qualifying the search with "R" or the name of an R package (or both). 
-**It can be particularly helpful to paste an error message into a search engine** to find out whether others have solved a problem that you encountered.
-
-
-
-# 5. EXITING R AND R STUDIO
-You can exit both at the same time using File??? Quit R Studio
-Or you can type q() at the command prompt. Note that this is the letter q followed by open and
-closed parentheses. 
